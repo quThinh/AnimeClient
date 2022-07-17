@@ -23,10 +23,10 @@ npm start
 
 ## Todo
 
-- <s>Footer</s> 
-- <s>Skeleton loading</s> 
-- <s>Video player overlay.</s> 
-- <s>"Chunk" episodes into chunks.</s> 
+- Footer
+- Skeleton loading
+- Video player overlay
+- "Chunk" episodes into chunks.
 
 ## Sources
 
