@@ -165,7 +165,6 @@ Plyr.displayName = "Plyr";
 Plyr.defaultProps = {
   options: {
     iconPrefix: "plyr",
-    iconUrl: "/plyr.svg",
     i18n: {
       restart: "Xem lại",
       rewind: "Lùi {seektime} giây",
