@@ -1,5 +1,6 @@
 import React from "react";
 
+//set interface for Route
 export interface Route {
   name: string;
   path: string;
@@ -18,6 +19,7 @@ export interface Icon {
   className?: string;
 }
 
+//properties of episode (add videoSource: string)
 export interface Episode {
   id: number;
   name: number;
@@ -39,6 +41,7 @@ export interface Source extends Episode {
   videoSource: string;
 }
 
+//properties of anime's information in infoScreen
 export interface AnimeInfo {
   id: number;
   name: string;
@@ -53,6 +56,7 @@ export interface AnimeInfo {
   episodes: Episode[];
 }
 
+//properties of anime's information in HomePage, Genres
 export interface Anime {
   id: number;
   name: string;
@@ -67,11 +71,13 @@ export interface Anime {
   episodeIndex?:number
 }
 
+//properties of Genres
 export interface Genre {
   name: string;
   slug: string;
 }
 
+//properties of Ranking
 export interface Ranking {
   name: string;
   slug: string;

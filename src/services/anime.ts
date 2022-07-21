@@ -27,6 +27,7 @@ interface GetListData {
   page?: number;
   sort?: string;
 }
+
 interface GetListData2 {
   category: string;
   slug?: string | undefined;
