@@ -1,4 +1,5 @@
 import React from "react";
+import { RiVipFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Image from "../components/Image";
 import useMatchLocation from "../hooks/useMatchLocation";
@@ -10,9 +11,9 @@ const Header = () => {
 
   return (
     <div className="fixed z-30 px-4 flex justify-center items-center w-screen h-16 bg-background-lighter">
-      <div className="absolute left-0 p-in">
+      <div className="absolute left-0 p-in ml-10" >
         <Link to="/">
-          <Image src="/logo.png" alt="logo" />
+          <RiVipFill color="red" size="50" />
         </Link>
       </div>
 
