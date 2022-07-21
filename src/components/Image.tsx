@@ -2,7 +2,7 @@ import React from "react";
 import { Img, ImgProps } from "react-image";
 import classNames from "classnames";
 import Skeleton from "./Skeleton";
-
+//Hoa
 const allowedTexts = ["w-", "h-", "mr-", "ml", "my", "mx", "px", "py"];
 
 const isAllowedText = (text: string) =>

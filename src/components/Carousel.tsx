@@ -2,7 +2,7 @@ import React, { PropsWithChildren, useCallback, useState } from "react";
 import Slider, { Settings } from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import classNames from "classnames";
-
+//Hoa
 interface CarouselProps {
   settings?: Settings;
 }

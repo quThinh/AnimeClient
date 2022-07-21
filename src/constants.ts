@@ -18,7 +18,7 @@ export const GENRES = [
   { slug: "the-thao", name: "Thể Thao" },
   { slug: "kich-tinh", name: "Kịch Tính" },
 ];
-
+//BXH Ngay Tuan Thang Nam
 export const RANKINGS = [
   {
     slug: "ngay",

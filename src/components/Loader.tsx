@@ -1,6 +1,6 @@
 import React from "react";
 import { ImSpinner2 } from "react-icons/im";
-
+//Hoa
 const Loader = () => {
   return (
     <div className="w-full h-full flex items-center justify-center">

@@ -4,7 +4,7 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { Anime } from "../types";
 import Image from "./Image";
-
+//file anh
 interface AnimeCardProps extends Anime {
   className?: string;
 }

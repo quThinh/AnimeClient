@@ -4,7 +4,7 @@ import { RiNumbersLine } from "react-icons/ri";
 import { GENRES, RANKINGS } from "./constants";
 import { Genre, Ranking, Route } from "./types";
 import lazyLoading from "./utils/lazyLoading";
-
+//Hoa
 const HomeScreen = lazyLoading(() => import("./pages/HomePage"));
 const BrowseScreen = lazyLoading(() => import("./pages/BrowseScreen"));
 const InfoScreen = lazyLoading(() => import("./pages/InfoScreen"));
