@@ -25,7 +25,7 @@ const Section = (props: SectionProps) => {
   return (
     <div className="mt-6">
       <div className="flex items-baseline justify-between space-x-2 text-white mb-3">
-        <h1 className="text-2xl font-medium">{title}</h1>
+        <h1 className="text-2xl font-medium text-black">{title}</h1>
         {to && (
           <Link to={to}>
             <h1 className="text-base text-gray-400 hover:text-secondary transition duration-300">

@@ -14,7 +14,6 @@ const BrowseScreen = () => {
   const { pathname } = useLocation();
 
   const [category, ...slug] = pathname.replace("/", "").split("/");
-  console.log(category)
   const { data, hasNextPage, isLoading, fetchNextPage, isFetchingNextPage } =
     useBrowseList({ category, slug: slug.join("/") });
 
@@ -33,7 +32,7 @@ const BrowseScreen = () => {
     <div className="w-full px-2 py-20 lg:px-20 lg:py-24">
       <div className="w-full p-2">
         <div className="flex items-center justify-between">
-          <p className="text-white font-bold text-4xl">{current?.name}</p>
+          <p className="text-black font-bold text-4xl">{current?.name}</p>
         </div>
 
         {isLoading && (

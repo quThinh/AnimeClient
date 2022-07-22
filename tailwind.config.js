@@ -13,6 +13,7 @@ module.exports = {
           DEFAULT: "#181818",
           lighter: "#262626",
           darker: "#0d0d0d",
+          brown : "#57534e"
         },
       },
       spacing: {

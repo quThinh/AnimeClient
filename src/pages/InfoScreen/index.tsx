@@ -78,7 +78,7 @@ const InfoScreen = () => {
                   "text-white md:bg-background-darker p-3 w-full space-y-2 rounded-b-md min-h-11"
                 )}
               >
-                <h1 className="text-base line-clamp-2">{info?.name}</h1>
+                <h1 className="text-base line-clamp-2 text-black">{info?.name}</h1>
 
                 <div>
                   <h1 className="text-sm line-clamp-1">
@@ -123,7 +123,7 @@ const InfoScreen = () => {
                     <div className="h-8 bg-gray-600"></div>
                   </Skeleton>
                 ) : (
-                  <h1 className="text-white text-2xl">{info?.name}</h1>
+                  <h1 className="text-2xl text-black">{info?.name}</h1>
                 )}
 
                 {isLoading ? (
@@ -131,7 +131,7 @@ const InfoScreen = () => {
                     <div className="h-6 bg-gray-600"></div>
                   </Skeleton>
                 ) : (
-                  <h1 className="text-gray-400 text-base">
+                  <h1 className="text-base text-black">
                     Thể loại: {info?.genres.map(({ name }) => name).join(", ")}
                   </h1>
                 )}
@@ -142,7 +142,7 @@ const InfoScreen = () => {
                   <div className="h-6 bg-gray-600"></div>
                 </Skeleton>
               ) : (
-                <h1 className="text-gray-300 text-base">{info?.description}</h1>
+                <h1 className="text-base text-black">{info?.description}</h1>
               )}
             </div>
           </div>
@@ -168,7 +168,7 @@ const InfoScreen = () => {
       </div>
       <div className="mt-6">
         <div className="items-baseline space-x-2 text-white mb-3">
-          <h1 className="mx-5 text-2xl block font-medium">Các phim có thể bạn thích</h1>
+          <h1 className="mx-5 text-2xl text-black block font-medium">Các phim có thể bạn thích</h1>
           <div className="my-12 flex flex-wrap">
             {!isLoading &&
               list?.map((anime) => (

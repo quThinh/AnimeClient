@@ -10,7 +10,7 @@ const Header = () => {
   const matchedRoute = useMatchLocation();
 
   return (
-    <div className="fixed z-30 px-4 flex justify-center items-center w-screen h-16 bg-background-lighter">
+    <div className="fixed z-30 px-4 flex justify-center items-center w-screen h-16 bg-background-brown">
       <div className="absolute left-0 p-in ml-10" >
         <Link to="/">
           <RiVipFill color="red" size="50" />
