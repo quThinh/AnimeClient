@@ -5,7 +5,7 @@
 
 body {
   @apply bg-background;
-  background-color: white;
+  background-color: #cbcbcb;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
