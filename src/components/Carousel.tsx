@@ -16,7 +16,7 @@ function NextArrow(props: ArrowButtonProps) {
   return (
     <div
       className={classNames(
-        "bg-black absolute -right-6 transform -translate-y-1/2 top-1/2 p-3 cursor-pointer z-10"
+        "bg-black absolute -right-6 transform -translate-y-1/2 top-1/2 p-3 cursor-pointer z-10",
       )}
       style={{ borderRadius: "50%" }}
       onClick={onClick}
@@ -31,7 +31,7 @@ function PrevArrow(props: ArrowButtonProps) {
   return (
     <div
       className={classNames(
-        "bg-black absolute -left-6 transform -translate-y-1/2 top-1/2 p-3 cursor-pointer z-10"
+        "bg-black absolute -left-6 transform -translate-y-1/2 top-1/2 p-3 cursor-pointer z-10",
       )}
       style={{ borderRadius: "50%" }}
       onClick={onClick}
@@ -59,14 +59,14 @@ const Carousel = (props: PropsWithChildren<CarouselProps>) => {
   }, [setSwiped]);
 
   const handleOnItemClick = useCallback(
-    (e) => {
+    (e: any) => {
       if (swiped) {
         e.stopPropagation();
         e.preventDefault();
         setSwiped(false);
       }
     },
-    [swiped]
+    [swiped],
   );
 
   const settings = { ...defaultSettings, ...props.settings };

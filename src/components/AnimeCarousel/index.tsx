@@ -49,7 +49,7 @@ const AnimeCarousel = (props: PropsWithChildren<AnimeCarouselProps>) => {
   const { data = [], settings, isLoading } = props;
   const finalSettings = { ...defaultSettings, ...settings };
   const [slidesToShow, setSlidesToShow] = useState(
-    finalSettings.slidesToScroll
+    finalSettings.slidesToScroll,
   );
   useEffect(() => {
     const findSlidesToShow = () => {

@@ -22,7 +22,7 @@ const Image = (props: ImgProps) => {
         <div
           className={classNames(
             "flex items-center justify-center p-4",
-            classes
+            classes,
           )}
         >
           <h1 className="text-center text-white text-base">

@@ -26,16 +26,18 @@ const InfoScreen = () => {
     navigate(`/watch/${slug}?episode_index=${index}`);
   };
 
-  const { data: info, isLoading } = useFetchInfo(slug);
+  const { data: info, isLoading } = useFetchInfo(slug || "");
   if (info !== undefined) {
-    let genreSlug = info.genres.map(item => item.slug)
-    let random = Math.floor(Math.random() * info?.genres?.length)
-    while(GENRES.map(item => item.slug).includes(genreSlug[random])){
+    let genreSlug = info.genres.map((item) => item.slug);
+    let random = Math.floor(Math.random() * info?.genres?.length);
+    while (GENRES.map((item) => item.slug).includes(genreSlug[random])) {
       random--;
     }
   }
-  const { data } =
-    useBrowseList({ category: "genres", slug: info?.genres[Math.floor(Math.random() * info?.genres.length)].slug });
+  const { data } = useBrowseList({
+    category: "genres",
+    slug: info?.genres[Math.floor(Math.random() * info?.genres.length)].slug,
+  });
   const list = data?.pages.map((list) => list.data).flat();
   const handleClick = (index = 0) => {
     return () => navigate(`/watch/${slug}?episode_index=${index}`);
@@ -67,7 +69,7 @@ const InfoScreen = () => {
                 src={info?.thumbnail!}
                 alt={info?.name}
                 className={classNames(
-                  "mx-auto filter blur-none w-44 lg:w-52 h-60 lg:h-80 object-cover rounded-md md:rounded-b-none"
+                  "mx-auto filter blur-none w-44 lg:w-52 h-60 lg:h-80 object-cover rounded-md md:rounded-b-none",
                 )}
               />
             )}
@@ -75,10 +77,12 @@ const InfoScreen = () => {
             {!isLoading && (
               <div
                 className={classNames(
-                  "text-white md:bg-background-darker p-3 w-full space-y-2 rounded-b-md min-h-11"
+                  "text-white md:bg-background-darker p-3 w-full space-y-2 rounded-b-md min-h-11",
                 )}
               >
-                <h1 className="text-base line-clamp-2 text-black">{info?.name}</h1>
+                <h1 className="text-base line-clamp-2 text-black">
+                  {info?.name}
+                </h1>
 
                 <div>
                   <h1 className="text-sm line-clamp-1">
@@ -92,8 +96,8 @@ const InfoScreen = () => {
             )}
           </div>
           <div className="w-full px-2 flex flex-col flex-1">
-            {
-              (!isLoading && info?.episodes?.length) ? <div className="flex-col md:flex-row space-x-2 space-y-2 md:space-y-0 -mt-2 self-center md:self-start flex items-center font-bold text-lg text-white filter blur-none">
+            {!isLoading && info?.episodes?.length ? (
+              <div className="flex-col md:flex-row space-x-2 space-y-2 md:space-y-0 -mt-2 self-center md:self-start flex items-center font-bold text-lg text-white filter blur-none">
                 <Button
                   className="bg-background-darker hover:bg-opacity-80"
                   onClick={handleClick()}
@@ -112,9 +116,12 @@ const InfoScreen = () => {
                     Xem {info?.episodes[storedInfo.episodeIndex!].full_name}
                   </Button>
                 )}
-              </div> : <div className="flex-col md:flex-row space-x-2 space-y-2 md:space-y-0 -mt-2 self-center md:self-start flex items-center font-bold text-lg text-white filter blur-none">Phim sắp chiếu</div>
-            }
-
+              </div>
+            ) : (
+              <div className="flex-col md:flex-row space-x-2 space-y-2 md:space-y-0 -mt-2 self-center md:self-start flex items-center font-bold text-lg text-white filter blur-none">
+                Phim sắp chiếu
+              </div>
+            )}
 
             <div className="mt-6 space-y-2">
               <div className="space-y-1">
@@ -168,7 +175,9 @@ const InfoScreen = () => {
       </div>
       <div className="mt-6">
         <div className="items-baseline space-x-2 text-white mb-3">
-          <h1 className="mx-5 text-2xl text-black block font-medium">Các phim có thể bạn thích</h1>
+          <h1 className="mx-5 text-2xl text-black block font-medium">
+            Các phim có thể bạn thích
+          </h1>
           <div className="my-12 flex flex-wrap">
             {!isLoading &&
               list?.map((anime) => (
@@ -181,9 +190,7 @@ const InfoScreen = () => {
               ))}
           </div>
         </div>
-
       </div>
-
     </div>
   );
 };

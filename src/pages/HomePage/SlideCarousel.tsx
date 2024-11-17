@@ -13,9 +13,7 @@ const SlideCarousel = () => {
     </Skeleton>
   ) : (
     <Carousel>
-      {slides?.map((slide) => (
-        <Slide {...slide} key={slide.slug} />
-      ))}
+      {slides?.map((slide) => <Slide {...slide} key={slide.slug} />)}
     </Carousel>
   );
 };

@@ -46,7 +46,7 @@ const Plyr: React.FC<PropsWithChildren<PlyrProps>> = (props) => {
     nextEpisodeClick,
     ...rest
   } = props;
-  console.log(source)
+  console.log(source);
   const videoSource = source?.sources[0].src!;
   const [player, setPlayer] = useState<PlyrInstance | undefined>();
   const [container, setContainer] = useState<Element | null>();
@@ -65,8 +65,8 @@ const Plyr: React.FC<PropsWithChildren<PlyrProps>> = (props) => {
   const createPlayer = () => {
     const plyrPlayer = new PlyrJS(".plyr-react", videoOptions);
     isListening = false;
-    console.log(videoSource)
-    console.log(!videoSource)
+    console.log(videoSource);
+    console.log(!videoSource);
     if (!videoSource.includes("m3u8")) {
       plyrPlayer.source = source!;
     }
@@ -83,9 +83,9 @@ const Plyr: React.FC<PropsWithChildren<PlyrProps>> = (props) => {
       setContainer(document.querySelector(".plyr--video"));
     });
 
-    plyrPlayer.on("enterfullscreen", () => {
-     window.screen.orientation.lock("landscape")
-    });
+    // plyrPlayer.on("enterfullscreen", () => {
+    //  window.screen.orientation.lock("landscape")
+    // });
   };
 
   hls.current.on(Hls.Events.MANIFEST_LOADED, () => {
@@ -221,5 +221,5 @@ export default React.memo(
     return (
       prevProps.source?.sources[0].src === nextProps.source?.sources[0].src
     );
-  }
+  },
 );

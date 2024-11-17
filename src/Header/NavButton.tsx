@@ -113,7 +113,7 @@ const Button = (props: ButtonProps) => {
           "tracking-wide font-medium hover:text-secondary duration-300 transition",
           StartIcon && "ml-2",
           EndIcon && "mr-2",
-          active ? "text-white text-base" : "text-sm text-gray-300"
+          active ? "text-white text-base" : "text-sm text-gray-300",
         )}
       >
         {text}

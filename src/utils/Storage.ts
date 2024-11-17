@@ -13,7 +13,7 @@ class Storage {
     // Filter out the item we wanna remove
     localStorage.setItem(
       storageKey,
-      JSON.stringify(list.filter((item) => !compareTwoObject(item, filter)))
+      JSON.stringify(list.filter((item) => !compareTwoObject(item, filter))),
     );
   }
 
@@ -23,7 +23,7 @@ class Storage {
     if (!rawList) {
       return localStorage.setItem(
         storageKey,
-        JSON.stringify([value]) // Save value in array
+        JSON.stringify([value]), // Save value in array
       );
     }
 
@@ -48,7 +48,7 @@ class Storage {
     return parsedList.find((item) => compareTwoObject(item, filter));
   }
 
-  static find<T>(storageKey: string, filter = {}): T[] | [] {
+  static find<T>(storageKey: string, filter: Partial<T> = {}): T[] | [] {
     const rawList = localStorage.getItem(storageKey);
 
     if (!rawList) return [];
@@ -87,7 +87,7 @@ const isObjectEmpty = (obj: object) => JSON.stringify(obj) === "{}";
 const compareTwoObject = <T, U extends keyof T>(obj1: T, obj2: T) => {
   let isComparedCount = 0;
 
-  const entries = Object.entries(obj2);
+  const entries = Object.entries(obj2 as object);
 
   for (const [key, value] of entries) {
     if (obj1[key as U] === value) {

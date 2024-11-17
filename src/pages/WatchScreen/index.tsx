@@ -1,4 +1,3 @@
-
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
@@ -26,15 +25,15 @@ const WatchScreen = () => {
   const [showPauseScreen, setShowPauseScreen] = useState(false);
   const [showOrientationScreen, setShowOrientationScreen] = useState(false);
   const [episodeIndex, setEpisodeIndex] = useState(
-    Number(query.get("episode_index")) || 0
+    Number(query.get("episode_index")) || 0,
   );
   const debounce = useRef<NodeJS.Timeout | null>(null);
 
-  const { data: info, isLoading: isInfoLoading } = useFetchInfo(slug);
+  const { data: info, isLoading: isInfoLoading } = useFetchInfo(slug || "");
   const { data: source, isLoading: isSourceLoading } = useFetchSource(
     info?.id!,
     episodeIndex,
-    !!info
+    !!info,
   );
   const handleEpisodeClick = (_episode: Episode, i: number) => {
     navigate(`/watch/${slug}?episode_index=${i}`, { replace: true });
@@ -56,7 +55,7 @@ const WatchScreen = () => {
         thumbnail: source?.thumbnail_medium,
         episodeIndex,
         time: episodes[episodeIndex]?.full_name,
-      }
+      },
     );
 
     addButtons([
@@ -90,7 +89,7 @@ const WatchScreen = () => {
 
         debounce.current = setTimeout(
           () => setShowPauseScreen(true),
-          timeoutSeconds * 1000
+          timeoutSeconds * 1000,
         );
       });
     }
@@ -140,7 +139,7 @@ const WatchScreen = () => {
         <div
           className={classNames(
             "absolute inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center",
-            !showOrientationScreen ? "hidden" : "block"
+            !showOrientationScreen ? "hidden" : "block",
           )}
         >
           <Image
@@ -163,7 +162,7 @@ const WatchScreen = () => {
         <div
           className={classNames(
             "absolute inset-0 bg-black bg-opacity-90 px-40 flex flex-col space-y-6 justify-center",
-            !showPauseScreen || isOrientationMobile ? "hidden" : "block"
+            !showPauseScreen || isOrientationMobile ? "hidden" : "block",
           )}
           onMouseEnter={() => {
             if (isDesktop && showPauseScreen) {

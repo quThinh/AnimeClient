@@ -35,7 +35,6 @@ interface GetListData2 {
   sort?: string;
 }
 
-
 export const getList = async ({
   category,
   slug,
@@ -60,7 +59,6 @@ export const getListData = async ({
   return data;
 };
 
-
 interface SearchProps {
   q: string;
   limit: number;
@@ -83,10 +81,10 @@ export const getInfo = async (slug: string): Promise<AnimeInfo> => {
 
 export const getSource = async (
   animeId: number,
-  episodeIndex: number
+  episodeIndex: number,
 ): Promise<Source> => {
   const { data } = await instance.get(
-    `/anime/${animeId}/episodes/${episodeIndex}`
+    `/anime/${animeId}/episodes/${episodeIndex}`,
   );
 
   return data.data;

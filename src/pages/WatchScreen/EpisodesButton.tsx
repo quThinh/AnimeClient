@@ -9,7 +9,7 @@ interface EpisodesButtonProps {
   episodes: EpisodeType[];
   onClick?: (
     episode: EpisodesButtonProps["episodes"][number],
-    index: number
+    index: number,
   ) => void;
   activeIndex?: number;
 }
@@ -39,7 +39,7 @@ const EpisodesButton = (props: EpisodesButtonProps) => {
               const activeEpisode = props.episodes[activeIndex!];
 
               const isOpen = chunk.some(
-                (episode) => episode.name - 1 === activeIndex
+                (episode) => episode.name - 1 === activeIndex,
               );
 
               return (

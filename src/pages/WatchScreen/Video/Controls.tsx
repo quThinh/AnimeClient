@@ -62,7 +62,7 @@ const PlyrControls: React.FC<PlyrControlsProps> = ({ player }) => {
 
   useEffect(() => {
     const defaultPlayButton = document.querySelector<HTMLElement>(
-      ".plyr__control--overlaid"
+      ".plyr__control--overlaid",
     );
 
     if (defaultPlayButton) {
@@ -96,7 +96,7 @@ const PlyrControls: React.FC<PlyrControlsProps> = ({ player }) => {
     <div
       className={classNames(
         "text-white flex items-center justify-evenly absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12",
-        !isOrientationMobile && "hidden"
+        !isOrientationMobile && "hidden",
       )}
     >
       <RewindButton onClick={handleRewind} />

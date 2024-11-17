@@ -7,6 +7,7 @@ import NextEpisodeButton from "./NextEpisodeButton";
 
 interface OverlayProps {
   player: PlyrInstance;
+  children: React.ReactNode;
   nextEpisodeClick?: () => void;
 }
 
@@ -31,14 +32,14 @@ const Overlay: React.FC<OverlayProps> = ({
       <div
         className={classNames(
           "plyr--overlay transition duration-300 z-1",
-          show ? "opacity-100" : "opacity-0"
+          show ? "opacity-100" : "opacity-0",
         )}
       >
         {/* Background Overlay */}
         <div
           className={classNames(
             "absolute left-0 top-0 h-full w-full bg-black bg-opacity-70 transition duration-300",
-            !isOrientationMobile && "hidden"
+            !isOrientationMobile && "hidden",
           )}
         />
 

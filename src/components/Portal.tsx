@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 interface PortalProps {
+  children: React.ReactNode;
   element: Element;
 }
 

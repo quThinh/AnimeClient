@@ -20,7 +20,7 @@ const Search = () => {
   });
 
   const handleKeywordChange: React.ChangeEventHandler<HTMLInputElement> = (
-    e
+    e,
   ) => {
     setKeyword(e.target.value);
 
@@ -63,7 +63,7 @@ const Search = () => {
       >
         <div
           className={classNames(
-            "absolute space-y-2 w-full max-h-60 overflow-y-scroll p-3 rounded-b-md bg-background-darker"
+            "absolute space-y-2 w-full max-h-60 overflow-y-scroll p-3 rounded-b-md bg-background-darker",
           )}
         >
           {isLoading ? (

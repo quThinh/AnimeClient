@@ -19,7 +19,7 @@ const Section = (props: SectionProps) => {
   const { data, isLoading } = useFetchList(
     category,
     slug,
-    !Array.isArray(animeData)
+    !Array.isArray(animeData),
   );
 
   return (

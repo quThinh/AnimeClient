@@ -5,12 +5,12 @@ import { Source } from "../../types";
 const useFetchSource = (
   animeId: number,
   episodeIndex: number,
-  enabled?: boolean
+  enabled?: boolean,
 ) => {
   return useQuery<Source>(
     ["source", { animeId, episodeIndex }],
     () => getSource(animeId, episodeIndex),
-    { enabled }
+    { enabled },
   );
 };
 

@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer p-4 w-full bg-background-brown">
       <div className="w-full flex items-center justify-between">
         {/* <Image src="logo.png" alt="footer logo" /> */}
-        <BsFilm color="red" size={20}/>
+        <BsFilm color="red" size={20} />
 
         {/* <div className="text-white flex items-center space-x-2">
             <AiFillGithub size={20} />

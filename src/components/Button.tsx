@@ -30,7 +30,7 @@ const ButtonRaw = (props: ButtonRawProps) => {
     <button
       className={classNames(
         "flex items-center px-4 py-2 rounded-md font-medium text-xs md:text-sm lg:text-base hover:bg-opacity-80",
-        className
+        className,
       )}
       {...buttonProps}
     >

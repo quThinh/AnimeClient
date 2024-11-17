@@ -14,7 +14,7 @@ const Select = (props: PropsWithChildren<SelectProps>) => {
       <select
         className={classNames(
           "text-lg font-medium rounded border border-gray-500 text-white px-5 focus:outline-none appearance-none",
-          className
+          className,
         )}
         {...selectProps}
       >

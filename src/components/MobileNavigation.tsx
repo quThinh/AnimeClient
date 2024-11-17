@@ -49,7 +49,7 @@ const MobileNavigation = () => {
               </Menu.Items>
             </Menu>
           );
-        }
+        },
       )}
     </div>
   );
@@ -69,7 +69,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   <div
     className={classNames(
       "flex flex-col justify-center items-center grow",
-      isActive ? "text-secondary" : "text-white"
+      isActive ? "text-secondary" : "text-white",
     )}
   >
     {Icon && <Icon className="w-6 h-6" />}

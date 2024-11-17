@@ -68,7 +68,7 @@ export interface Anime {
     name: string;
     views: number;
   };
-  episodeIndex?:number
+  episodeIndex?: number;
 }
 
 //properties of Genres

@@ -22,7 +22,7 @@ Tooltip.Panel = (props: PropsWithChildren<TooltipPanelProps>) => {
     <div
       className={classNames(
         "tooltip-panel mt-1 overflow-y-scroll px-4 py-2 absolute",
-        props.className
+        props.className,
       )}
     >
       {props.children}

@@ -33,7 +33,6 @@ const DesktopMenu = ({
             <Tooltip.Panel className="flex w-96 h-52 flex-wrap justify-between items-center bg-background-darker text-secondary border-t-2 border-secondary rounded-md rounded-t-none">
               {route.dropdownData?.map((data) => (
                 <NavButton
-               
                   text={data.name}
                   to={route.dropdownPath?.(data)}
                   key={route.listKey?.(data)}
@@ -42,7 +41,7 @@ const DesktopMenu = ({
               ))}
             </Tooltip.Panel>
           </Tooltip>
-        )
+        ),
       )}
     </div>
   );

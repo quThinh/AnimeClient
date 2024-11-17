@@ -17,7 +17,7 @@ const AnimeCard = (props: AnimeCardProps) => {
           src={props.thumbnail}
           alt={props.name}
           className={classNames(
-            "w-full h-32 object-cover rounded-md rounded-b-none"
+            "w-full h-32 object-cover rounded-md rounded-b-none",
           )}
         />
 
@@ -33,7 +33,7 @@ const AnimeCard = (props: AnimeCardProps) => {
       </div>
       <div
         className={classNames(
-          "bg-background-darker p-3 w-full space-y-2 rounded-b-md min-h-4"
+          "bg-background-darker p-3 w-full space-y-2 rounded-b-md min-h-4",
         )}
       >
         <p className="uppercase text-white font-medium text-sm line-clamp-2">

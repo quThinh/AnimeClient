@@ -26,7 +26,7 @@ export const addButton = (button: Button) => {
   div.className = classNames(
     "plyr__controls__item plyr__control",
     `plyr_buttons--${id}`,
-    className
+    className,
   );
 
   const controlsChildNodes = controls?.childNodes;
@@ -36,7 +36,7 @@ export const addButton = (button: Button) => {
       div,
       position < 0
         ? controlsChildNodes[controlsChildNodes?.length! - 1]
-        : controlsChildNodes[position - 1]
+        : controlsChildNodes[position - 1],
     );
 
     ReactDOM.render(component, div);
