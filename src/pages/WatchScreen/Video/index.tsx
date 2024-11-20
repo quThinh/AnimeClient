@@ -2,7 +2,7 @@
 import Hls from "hls.js";
 import PlyrJS, { Options, PlyrEvent as PlyrJSEvent, SourceInfo } from "plyr";
 import "plyr/dist/plyr.css";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import React, {
   HTMLProps,
   MutableRefObject,
@@ -139,7 +139,6 @@ const Plyr: React.FC<PropsWithChildren<PlyrProps>> = (props) => {
     }
 
     return () => player?.destroy();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoSource]);
 
   return (
@@ -210,10 +209,10 @@ Plyr.defaultProps = {
   },
 };
 
-Plyr.propTypes = {
-  options: PropTypes.object,
-  source: PropTypes.any,
-};
+// Plyr.propTypes = {
+//   options: PropTypes.object,
+//   source: PropTypes.any,
+// };
 
 export default React.memo(
   Plyr,

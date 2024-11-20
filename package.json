@@ -21,21 +21,13 @@
     "react-router": "^6.0.0-beta.0",
     "react-router-dom": "^6.0.0-beta.0",
     "react-slick": "^0.30.2",
-    "react-topbar-progress-indicator": "^4.1.0",
-    "typescript": "^5.6.3",
-    "web-vitals": "^4.2.4"
+    "react-topbar-progress-indicator": "^4.1.0"
   },
   "scripts": {
     "start": "set PORT=3007 && craco start",
     "build": "craco build",
     "test": "craco test",
     "format": "prettier --write src/"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -53,7 +45,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-slick": "^0.23.5",

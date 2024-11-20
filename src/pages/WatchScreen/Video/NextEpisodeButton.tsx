@@ -24,7 +24,6 @@ const NextEpisodeButton: React.FC<Props> = ({ player, onClick }) => {
       }
     });
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

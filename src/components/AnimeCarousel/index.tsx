@@ -77,7 +77,6 @@ const AnimeCarousel = (props: PropsWithChildren<AnimeCarouselProps>) => {
     window.addEventListener("resize", findSlidesToShow);
 
     findSlidesToShow();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
