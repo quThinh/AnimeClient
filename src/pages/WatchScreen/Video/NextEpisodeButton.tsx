@@ -23,7 +23,6 @@ const NextEpisodeButton: React.FC<Props> = ({ player, onClick }) => {
         setShowNextEpisodeButton(false);
       }
     });
-
   }, []);
 
   return (
